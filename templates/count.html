@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Counting</title>
+    </head>
+    <body>
+        <h1>Full Text:</h1>
+        {{ fulltext }}
+        <br />
+
+        <a href="{% url 'home' %}">New Count</a>
+
+        <h1>Word Count</h1>
+
+        {% for word, word_count in sorted_word %}
+
+            {{ word }} - {{ word_count }}
+            <br />
+
+        {% endfor %}
+
+    </body>
+</html>
